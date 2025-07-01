@@ -26,11 +26,12 @@ public partial class Subscriptions
     public int Ampquantity { get; set; }
     public string PurchaserEmail { get; set; }
     public Guid? PurchaserTenantId { get; set; }
-
+    public Guid? BeneficiaryTenantId { get; set; }
     public string Term { get; set; }
     public DateTime? StartDate { get; set; }
     public DateTime? EndDate { get; set; }
 
+   
 
     public virtual Users User { get; set; }
     public virtual ICollection<MeteredAuditLogs> MeteredAuditLogs { get; set; }

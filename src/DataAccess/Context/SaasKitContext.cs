@@ -450,6 +450,9 @@ public partial class SaasKitContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false);
 
+            entity.Property(e => e.BeneficiaryTenantId)
+                .HasMaxLength(36);
+
             entity.HasOne(d => d.User)
                 .WithMany(p => p.Subscriptions)
                 .HasForeignKey(d => d.UserId)
@@ -458,6 +461,8 @@ public partial class SaasKitContext : DbContext
             entity.HasMany(e => e.MeteredPlanSchedulerManagements)
                 .WithOne(e => e.Subscriptions)
                 .HasForeignKey(e => e.SubscriptionId);
+
+            
         });
 
         modelBuilder.Entity<Users>(entity =>
