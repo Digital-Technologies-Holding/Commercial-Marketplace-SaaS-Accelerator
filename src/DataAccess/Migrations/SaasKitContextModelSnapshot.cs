@@ -17,10 +17,10 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.6")
+                .HasAnnotation("ProductVersion", "6.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
             modelBuilder.Entity("Marketplace.SaaS.Accelerator.DataAccess.Entities.ApplicationConfiguration", b =>
                 {
@@ -29,7 +29,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasColumnName("ID");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Description")
                         .HasMaxLength(255)
@@ -53,7 +53,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime?>("ActionTime")
                         .HasColumnType("datetime");
@@ -86,10 +86,10 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasColumnName("ID");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<decimal>("VersionNumber")
-                        .HasColumnType("decimal(6, 2)");
+                        .HasColumnType("decimal(6,2)");
 
                     b.ToTable("DatabaseVersionHistory");
                 });
@@ -101,7 +101,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasColumnName("ID");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Bcc")
                         .HasMaxLength(1000)
@@ -156,7 +156,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EventsId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EventsId"), 1L, 1);
 
                     b.Property<DateTime?>("CreateDate")
                         .HasColumnType("datetime");
@@ -180,7 +180,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
@@ -203,7 +203,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("CreatedBy")
                         .HasColumnType("int");
@@ -250,7 +250,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime");
@@ -281,7 +281,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int?>("DimensionId")
                         .IsRequired()
@@ -335,7 +335,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasColumnName("ID");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime?>("CreateDate")
                         .HasColumnType("datetime");
@@ -405,7 +405,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime?>("CreateDate")
                         .HasColumnType("datetime");
@@ -438,7 +438,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PlanAttributeId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PlanAttributeId"), 1L, 1);
 
                     b.Property<DateTime?>("CreateDate")
                         .HasColumnType("datetime");
@@ -502,7 +502,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<bool?>("CopyToCustomer")
                         .HasColumnType("bit");
@@ -584,7 +584,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
@@ -626,7 +626,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Name")
                         .HasMaxLength(50)
@@ -644,7 +644,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Frequency")
                         .IsRequired()
@@ -695,9 +695,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                     b.Property<string>("SubscriptionName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.ToTable((string)null);
-
-                    b.ToView("SchedulerManagerView", (string)null);
+                    b.ToView("SchedulerManagerView");
                 });
 
             modelBuilder.Entity("Marketplace.SaaS.Accelerator.DataAccess.Entities.SubscriptionAttributeValues", b =>
@@ -707,7 +705,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasColumnName("ID");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime?>("CreateDate")
                         .HasColumnType("datetime");
@@ -745,7 +743,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Attribute")
                         .HasMaxLength(20)
@@ -784,7 +782,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Name")
                         .HasMaxLength(225)
@@ -894,7 +892,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("AmpOfferId")
                         .HasColumnType("nvarchar(max)");
@@ -914,10 +912,6 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("AMPSubscriptionId")
                         .HasDefaultValueSql("(newid())");
-
-                    b.Property<Guid?>("BeneficiaryTenantId")
-                        .HasMaxLength(36)
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int?>("CreateBy")
                         .HasColumnType("int");
@@ -974,7 +968,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"), 1L, 1);
 
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime");
@@ -1000,7 +994,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ValueTypeId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ValueTypeId"), 1L, 1);
 
                     b.Property<DateTime?>("CreateDate")
                         .HasColumnType("datetime");
@@ -1029,7 +1023,7 @@ namespace Marketplace.SaaS.Accelerator.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasColumnName("ID");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Description")
                         .IsUnicode(false)
