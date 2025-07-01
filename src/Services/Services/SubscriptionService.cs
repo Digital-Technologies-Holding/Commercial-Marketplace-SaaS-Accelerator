@@ -67,6 +67,7 @@ public class SubscriptionService
             UserId = customerUserId == 0 ? this.currentUserId : customerUserId,
             PurchaserEmail = subscriptionDetail.Purchaser.EmailId,
             PurchaserTenantId = subscriptionDetail.Purchaser.TenantId,
+            BeneficiaryTenantID = subscriptionDetail.Beneficiary.TenantId,
             AmpOfferId = subscriptionDetail.OfferId,
             Term = subscriptionDetail.Term.TermUnit.ToString(),
             StartDate = subscriptionDetail.Term.StartDate.ToUniversalTime().DateTime,
